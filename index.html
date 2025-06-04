@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>AI Poem generator</title>
+    <title>AI Poem Generator</title>
   </head>
   <body>
-    <h1>Welcome</h1>
+    <h1>Poem Generator</h1>
+    <main>
+      <form id="poemForm">
+        <input
+          type="text"
+          id="poemTopic"
+          placeholder="Enter the topic of the poem"
+          required
+          autofocus
+          autocomplete="off"
+        />
+        <button type="submit">Generate Poem</button>
+      </form>
+
+      <!-- Poem will display here -->
+      <div id="poemResult"></div>
+    </main>
+
     <footer>
       This AI project coded by
       <a href="https://github.com/Spheh123" target="_blank">Sphelele Chavula</a>
       and is open-sourced on
       <a href="https://github.com/Spheh123/poems-generator" target="_blank"
         >GitHub</a
+      >
+      and is hosted on
+      <a href="https://sphes-poems-generator.netlify.app/" target="_blank"
+        >Netlify</a
       >
     </footer>
     <script src="src/index.js"></script>
