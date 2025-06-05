@@ -1,21 +1,29 @@
-/* Basic reset */
-body {
+/* Base Styles */
+* {
   margin: 0;
-  padding: 20px;
-  font-family: "Open Sans", sans-serif;
-  background-color: #f0f8ff;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.page-wrapper {
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f9ff;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* Layout */
+.container {
   width: 800px;
   margin: 0 auto;
-  background-color: white;
-  padding: 30px;
+  background: white;
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -33,13 +41,14 @@ h1 {
   font-style: italic;
 }
 
-form {
+/* Form */
+#poemForm {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
 }
 
-input {
+#poemTopic {
   flex: 1;
   padding: 12px;
   border: 2px solid #ddd;
@@ -47,45 +56,38 @@ input {
   font-size: 16px;
 }
 
+#poemTopic:focus {
+  outline: none;
+  border-color: #2a5ca7;
+}
+
 button {
   padding: 12px 25px;
-  background-color: #2a5ca7;
+  background: #2a5ca7;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #1e4b8f;
+  background: #1e4b8f;
 }
 
+/* Poem Output */
 .poem-output {
-  min-height: 150px;
+  min-height: 200px;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-left: 5px solid #2a5ca7;
+  background: #f8fafc;
+  border-left: 4px solid #2a5ca7;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.8;
+  border-radius: 8px;
 }
 
-footer {
-  margin-top: 30px;
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
-}
-
-footer a {
-  color: #2a5ca7;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-/* Loading Animation */
+/* Loading & Error States */
 .loading {
   display: flex;
   align-items: center;
@@ -93,6 +95,15 @@ footer a:hover {
   gap: 10px;
   color: #2a5ca7;
   font-style: italic;
+  min-height: 100px;
+}
+
+.error {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 3px solid #d32f2f;
 }
 
 .spinner {
@@ -110,9 +121,20 @@ footer a:hover {
   }
 }
 
-#poemResult {
-  min-height: 200px;
-  white-space: pre-wrap;
-  font-size: 1.1em;
-  line-height: 1.8;
+/* Footer */
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #2a5ca7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
