@@ -2,41 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <title>AI Poem Generator</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Poem Generator</h1>
-    <main>
-      <form id="poemForm">
-        <input
-          type="text"
-          id="poemTopic"
-          placeholder="Enter the topic of the poem"
-          required
-          autofocus
-          autocomplete="off"
-        />
-        <button type="submit">Generate Poem</button>
-      </form>
+    <div class="page-wrapper">
+      <header>
+        <h1>Poem Generator</h1>
+        <p class="tagline">Create beautiful poems instantly</p>
+      </header>
 
-      <!-- Poem will display here -->
-      <div id="poemResult"></div>
-    </main>
+      <main>
+        <form id="poemForm">
+          <input
+            type="text"
+            id="poemTopic"
+            placeholder="Enter poem topic (e.g. 'sunset', 'friendship')"
+            required
+            autofocus
+            autocomplete="off"
+          />
+          <button type="submit">Generate Poem</button>
+        </form>
 
-    <footer>
-      This AI project coded by
-      <a href="https://github.com/Spheh123" target="_blank">Sphelele Chavula</a>
-      and is open-sourced on
-      <a href="https://github.com/Spheh123/poems-generator" target="_blank"
-        >GitHub</a
-      >
-      and is hosted on
-      <a href="https://sphes-poems-generator.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-    </footer>
+        <div id="poemResult" class="poem-output"></div>
+      </main>
+
+      <footer>
+        <p>
+          Created by Sphelele Chavula |
+          <a href="https://github.com/Spheh123" target="_blank">GitHub</a> |
+          <a href="https://sphes-poems-generator.netlify.app/" target="_blank"
+            >Live Demo</a
+          >
+        </p>
+      </footer>
+    </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>
